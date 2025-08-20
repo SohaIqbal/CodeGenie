@@ -1,6 +1,10 @@
-const express = require('express');
-const airoute = require('./routes/ai.route');
-const cors = require('cors');
+import express from 'express';
+import airoute from './routes/ai.route.js';
+import userroutes from './routes/userRoutes.js';
+import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
+
 const app = express();
 
 app.use(cors());
@@ -12,4 +16,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/ai', airoute);
-module.exports = app;
+app.use('/user', userroutes);
+
+export default app;

@@ -188,11 +188,14 @@ export default function Landingmain() {
       {/* Buttons */}
       <div className="mt-8 flex gap-6">
         
-        <a href="/code-review">
+        <a href="/login">
         <button className="px-6 py-3 text-lg font-medium rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 transition-all duration-300 shadow-md hover:shadow-lg">
           Get Started
         </button>
         </a>
+         
+
+        
       </div>
 
       {/* Footer */}

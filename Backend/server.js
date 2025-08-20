@@ -1,9 +1,11 @@
-const http= require('http')
+import http from 'http';
+import app from './src/app.js';
+import connectToDB from './src/db/db.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
-require('dotenv').config();
-const app = require('./src/app');
-const connectToDB = require('./src/db/db')
 const server = http.createServer(app)
+
 
 connectToDB()
 server.listen(process.env.PORT, () => {

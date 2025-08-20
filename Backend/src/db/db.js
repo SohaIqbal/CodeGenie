@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-
+import mongoose from 'mongoose';
 function connectToDB(){
     mongoose.connect(process.env.DB).then
     ( () => console.log('Connected to MongoDB') )
@@ -8,4 +7,4 @@ function connectToDB(){
 
 
 }
-module.exports = connectToDB
+export default connectToDB;

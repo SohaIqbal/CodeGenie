@@ -7,3 +7,21 @@ body, html{
     margin: 0;
     box-sizing: border-box;
 }
+
+ .custom-editor textarea:focus {
+    outline: none !important;
+  }
+
+@layer components {
+  .custom-editor:focus-within {
+    
+    @apply outline outline-2 outline-[#C594C6] rounded-lg;
+  }
+}
+.gradient-text1 {
+  background: linear-gradient(270deg, #4172d4, black, #223b6d);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 6s ease infinite;
+}

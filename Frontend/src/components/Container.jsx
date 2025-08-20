@@ -2,8 +2,9 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Spinner from './Spinner';
 
-export default function SimpleContainer({ width, disableGutters ,bgcolor , children, maxWidth}) {
+export default function SimpleContainer({ width, disableGutters ,bgcolor , children,loader }) {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -12,6 +13,8 @@ export default function SimpleContainer({ width, disableGutters ,bgcolor , child
           {children}
         </Box>
       </Container>
+      {loader && <Spinner />}
+
     </React.Fragment>
   );
 }

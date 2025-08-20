@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
   margin: 0;
   padding: 0;
@@ -6,4 +9,8 @@
 html, body{
   height: 100%;
   width: 100%;
+}
+
+.custom-editor:focus {
+  @apply outline outline-2 outline-purple-500 rounded-lg;
 }

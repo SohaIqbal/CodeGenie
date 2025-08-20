@@ -1,6 +1,5 @@
-const generatecontent = require('../services/ai.service.js');
-
-module.exports.getaicontroller= async (req,res)=>{
+import generateContent from '../services/ai.service.js';
+const getaicontroller= async (req,res)=>{
     const code = req.body.code;
 
     if(!code){
@@ -8,7 +7,8 @@ module.exports.getaicontroller= async (req,res)=>{
         return;
     }
 
-    const response = await generatecontent(code);
+    const response = await generateContent(code);
     res.send(response);
    
 }
+export default getaicontroller;
